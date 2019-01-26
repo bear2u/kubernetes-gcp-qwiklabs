@@ -2,7 +2,7 @@
 
 ## GSP021
 
-![Google Cloud Self-Paced Labs](18c387ca46aa9a54c78aa11e4174f249a31760f1de22f6aa6b6a87133c3a39c7.png)
+![Google Cloud Self-Paced Labs](assets/18c387ca46aa9a54c78aa11e4174f249a31760f1de22f6aa6b6a87133c3a39c7-1548516162769.png)
 
 ## Overview
 
@@ -21,7 +21,7 @@ Kubernetes is all about applications. In this part of the lab you will use an ex
 - [kelseyhightower/hello](https://hub.docker.com/r/kelseyhightower/hello) - Hello microservice. Greets authenticated users.
 - [ngnix](https://hub.docker.com/_/nginx) - Frontend to the auth and hello services.
 
-![9f35a311fce0abdc.png](7568a481744539084d7c79883c0deb2212a3024770f41679e30cd285f798bca8.png)
+![9f35a311fce0abdc.png](assets/7568a481744539084d7c79883c0deb2212a3024770f41679e30cd285f798bca8.png)
 
 Kubernetes is an open source project (available on [kubernetes.io](http://kubernetes.io/)) which can run on many different environments, from laptops to high-availability multi-node clusters, from public clouds to on-premise deployments, from virtual machines to bare metal.
 
@@ -50,7 +50,7 @@ To complete this lab, you need:
 
 1. Click the **Start Lab** button. If you need to pay for the lab, a pop-up opens for you to select your payment method. On the left, the **Connection Details** panel becomes populated with the temporary credentials that you must use for this lab.
 
-   ![Open Google Console](77f1dfb0d993a3750cecf55a47a18f4b7a4be8475c91f9587f52f84c5fbf7f3f.png)
+   ![Open Google Console](assets/77f1dfb0d993a3750cecf55a47a18f4b7a4be8475c91f9587f52f84c5fbf7f3f-1548516162872.png)
 
 2. Copy the username, and then click **Open Google Console**. The lab spins up resources, and then opens another tab that shows the **Choose an account** page.
 
@@ -58,7 +58,7 @@ To complete this lab, you need:
 
 3. On the Choose an account page, click **Use Another Account**.
 
-   ![Choose an account](790eb13e73e7d771a38893f74569475b088c8e1a281f14cdbf37e0d402f658fc.png)
+   ![Choose an account](assets/790eb13e73e7d771a38893f74569475b088c8e1a281f14cdbf37e0d402f658fc-1548516162797.png)
 
 4. The Sign in page opens. Paste the username that you copied from the Connection Details panel. Then copy and paste the password.
 
@@ -72,7 +72,7 @@ To complete this lab, you need:
 
 After a few moments, the GCP console opens in this tab.
 
-**Note:** You can view the menu with a list of GCP Products and Services by clicking the **Navigation menu** at the top-left, next to “Google Cloud Platform”. ![Cloud Console Menu](f6f4fbc4f971a0d3ff3ec2b427c8f464f141e079e7a5a2095420c1c9a06b4878.png)
+**Note:** You can view the menu with a list of GCP Products and Services by clicking the **Navigation menu** at the top-left, next to “Google Cloud Platform”. ![Cloud Console Menu](assets/f6f4fbc4f971a0d3ff3ec2b427c8f464f141e079e7a5a2095420c1c9a06b4878-1548516162774.png)
 
 ### Activate Google Cloud Shell
 
@@ -80,17 +80,17 @@ Google Cloud Shell is a virtual machine that is loaded with development tools. I
 
 1. In GCP console, on the top right toolbar, click the Open Cloud Shell button.
 
-   ![Cloud Shell icon](bdd6397bf6a7f59197c396bf64c6f56a0a578511a8cec39a747511711f2d8404.png)
+   ![Cloud Shell icon](assets/bdd6397bf6a7f59197c396bf64c6f56a0a578511a8cec39a747511711f2d8404-1548516162784.png)
 
 2. In the dialog box that opens, click **START CLOUD SHELL**:
 
-   ![Start Cloud Shell](2b3aa073e2de48f786ec9497068b23b4bb0479e055c72b245c68c629a3eb6bb5.png)
+   ![Start Cloud Shell](assets/2b3aa073e2de48f786ec9497068b23b4bb0479e055c72b245c68c629a3eb6bb5-1548516163258.png)
 
    You can click "START CLOUD SHELL" immediately when the dialog box opens.
 
 It takes a few moments to provision and connect to the environment. When you are connected, you are already authenticated, and the project is set to your *PROJECT_ID*. For example:
 
-![Cloud Shell Terminal](86630ad16e354f193edb46d0cae0cff60eb4bc27416a3212fb9da22367f86d89.png)
+![Cloud Shell Terminal](assets/86630ad16e354f193edb46d0cae0cff60eb4bc27416a3212fb9da22367f86d89-1548516163189.png)
 
 **gcloud** is the command-line tool for Google Cloud Platform. It comes pre-installed on Cloud Shell and supports tab-completion.
 
@@ -233,7 +233,7 @@ At the core of Kubernetes is the [Pod](http://kubernetes.io/docs/user-guide/pods
 
 Pods represent and hold a collection of one or more containers. Generally, if you have multiple containers with a hard dependency on each other, you package the containers inside a single pod.
 
-![fb02d86798243fcb.png](b73bcce701677c046738d0175fdea7cfc3a0a8e6b58a1c7a90293e7a531a91fc.jpg)
+![fb02d86798243fcb.png](assets/b73bcce701677c046738d0175fdea7cfc3a0a8e6b58a1c7a90293e7a531a91fc.jpg)
 
 In this example there is a pod that contains the monolith and nginx containers.
 
@@ -409,7 +409,7 @@ What happens if you want to communicate with a set of Pods? When they get restar
 
 That's where [Services](http://kubernetes.io/docs/user-guide/services/) come in. Services provide stable endpoints for Pods.
 
-![393e02e1d49f3b37.png](260d13ff7dba012c2a783d6f0143c1587e70d43ff4a199facf9990e4cb9bc0bf.jpg)
+![393e02e1d49f3b37.png](assets/260d13ff7dba012c2a783d6f0143c1587e70d43ff4a199facf9990e4cb9bc0bf.jpg)
 
 Services use labels to determine what Pods they operate on. If Pods have the correct labels, they are automatically picked up and exposed by our services.
 
@@ -580,11 +580,11 @@ Bam! Houston, we have contact.
 
 The goal of this lab is to get you ready for scaling and managing containers in production. That's where [Deployments](http://kubernetes.io/docs/user-guide/deployments/#what-is-a-deployment) come in. Deployments are a declarative way to ensure that the number of Pods running is equal to the desired number of Pods, specified by the user.
 
-![f96989028fa7d280.png](d540fb3133f4671c1e704ffae0c25234e3fc401eec53dad32343d2bf4f0e573d.jpg)The main benefit of Deployments is in abstracting away the low level details of managing Pods. Behind the scenes Deployments use [Replica Sets](http://kubernetes.io/docs/user-guide/replicasets/) to manage starting and stopping the Pods. If Pods need to be updated or scaled, the Deployment will handle that. Deployment also handles restarting Pods if they happen to go down for some reason.
+![f96989028fa7d280.png](assets/d540fb3133f4671c1e704ffae0c25234e3fc401eec53dad32343d2bf4f0e573d.jpg)The main benefit of Deployments is in abstracting away the low level details of managing Pods. Behind the scenes Deployments use [Replica Sets](http://kubernetes.io/docs/user-guide/replicasets/) to manage starting and stopping the Pods. If Pods need to be updated or scaled, the Deployment will handle that. Deployment also handles restarting Pods if they happen to go down for some reason.
 
 Let's look at a quick example:
 
-![b2e31eed284e4cfe.png](7c7e19c4637183928b072e7291bc0a3484bd30827d72070c103ba10746bdb81a.jpg)
+![b2e31eed284e4cfe.png](assets/7c7e19c4637183928b072e7291bc0a3484bd30827d72070c103ba10746bdb81a.jpg)
 
 Pods are tied to the lifetime of the Node they are created on. In the example above, Node3 went down (taking a Pod with it). Insteading of manually creating a new Pod and finding a Node for it, your Deployment created a new Pod and started it on Node2.
 
@@ -680,7 +680,7 @@ And you get a hello response back!
 
 Congratulations! You've developed a multi-service application using Kubernetes. The skills you've learned here will allow you to deploy complex applications on Kubernetes using a collection of deployments and services.
 
-![ac89564fa3705b3a.png](40d06a7e0d43ff30b0dca7628a829b9c1d58597f63a40b36d61a251a1c27cbf6.png) ![6d0798e24a18671b.png](d8b48d75b054de5bb452ab57d6152b3048a9f9b2ac73d79ca507be5ed20bf6a6.png)
+![ac89564fa3705b3a.png](assets/40d06a7e0d43ff30b0dca7628a829b9c1d58597f63a40b36d61a251a1c27cbf6.png) ![6d0798e24a18671b.png](assets/d8b48d75b054de5bb452ab57d6152b3048a9f9b2ac73d79ca507be5ed20bf6a6-1548516163589.png)
 
 ### Finish Your Quest
 
